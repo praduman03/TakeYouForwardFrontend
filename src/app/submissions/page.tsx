@@ -13,12 +13,15 @@ const Submissions = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
+      const response = await fetch(
+        "https://takeyouforward-task.onrender.com/api/",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json"
+          }
         }
-      });
+      );
       const data = await response.json();
       setData(data.allData);
     } catch (error) {

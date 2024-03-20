@@ -16,18 +16,21 @@ export default function Home() {
 
   const onSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          username,
-          preferredLanguage: language,
-          sourceCode: value,
-          stdin: input
-        })
-      });
+      const response = await fetch(
+        "https://takeyouforward-task.onrender.com/api/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            username,
+            preferredLanguage: language,
+            sourceCode: value,
+            stdin: input
+          })
+        }
+      );
 
       const data = await response.json();
       console.log(data);
