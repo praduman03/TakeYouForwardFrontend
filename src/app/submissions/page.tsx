@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "./Submissions.css";
+import "./submissions.css";
 import Navbar from "../component/Navbar";
 
 const Submissions = () => {
